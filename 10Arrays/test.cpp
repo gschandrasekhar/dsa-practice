@@ -1,16 +1,18 @@
+#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-  int arr[5]={1,2,3,4,5};
-  int arr1[]={1,2,3,4,5,6,7,8};
-  //size of array;
-  int size=sizeof(arr)/sizeof(arr[0]);
-  cout<<size;
-  //to know address of any elements;
-  for(int i=0;i<5;i++)
-  {
-    cout<<&arr<<endl;
-  }
+   int arr[10]={1,2,3,4,5,6,7,8,9,10};
+   int max=INT_MIN;
+   int n=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0;i<n;i++)
+   {
+    if(max<arr[i]) max=arr[i];
+   }
+
+   cout<<"Largest "<<max;
+   
+   
   return 0;
 }
